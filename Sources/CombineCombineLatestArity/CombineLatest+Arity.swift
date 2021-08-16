@@ -8,6 +8,13 @@ import Combine
 
 @available(OSX 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
 public extension Publisher {
+    /// Subscribes to four additional publishers and publishes a tuple upon receiving output from any of the publishers.
+    ///
+    /// - Parameters:
+    ///   - publisher1: A second publisher to combine with the first publisher.
+    ///   - publisher2: A third publisher to combine with the first publisher.
+    ///   - publisher3: A fourth publisher to combine with the first publisher.
+    /// - Returns: A publisher that receives and combines elements from this publisher and three other publishers.
     @inlinable
     func combineLatest<A: Publisher, B: Publisher, C: Publisher, D: Publisher>(_ a: A,
                                                                                _ b: B,
@@ -25,6 +32,14 @@ public extension Publisher {
             .eraseToAnyPublisher()
     }
 
+    /// Subscribes to five additional publishers and publishes a tuple upon receiving output from any of the publishers.
+    ///
+    /// - Parameters:
+    ///   - publisher1: A second publisher to combine with the first publisher.
+    ///   - publisher2: A third publisher to combine with the first publisher.
+    ///   - publisher3: A fourth publisher to combine with the first publisher.
+    ///   - publisher4: A fifth publisher to combine with the first publisher.
+    /// - Returns: A publisher that receives and combines elements from this publisher and four other publishers.
     @inlinable
     func combineLatest<A: Publisher, B: Publisher, C: Publisher, D: Publisher, E: Publisher>(_ a: A,
                                                                                              _ b: B,
@@ -44,6 +59,16 @@ public extension Publisher {
             .eraseToAnyPublisher()
     }
 
+
+    /// Subscribes to six additional publishers and publishes a tuple upon receiving output from any of the publishers.
+    ///
+    /// - Parameters:
+    ///   - publisher1: A second publisher to combine with the first publisher.
+    ///   - publisher2: A third publisher to combine with the first publisher.
+    ///   - publisher3: A fourth publisher to combine with the first publisher.
+    ///   - publisher4: A fifth publisher to combine with the first publisher.
+    ///   - publisher5: A sixth publisher to combine with the first publisher.
+    /// - Returns: A publisher that receives and combines elements from this publisher and five other publishers.
     @inlinable
     func combineLatest<A: Publisher, B: Publisher, C: Publisher, D: Publisher, E: Publisher, F: Publisher>(_ a: A,
                                                                                                            _ b: B,
@@ -64,6 +89,16 @@ public extension Publisher {
             .eraseToAnyPublisher()
     }
 
+    /// Subscribes to seven additional publishers and publishes a tuple upon receiving output from any of the publishers.
+    ///
+    /// - Parameters:
+    ///   - publisher1: A second publisher to combine with the first publisher.
+    ///   - publisher2: A third publisher to combine with the first publisher.
+    ///   - publisher3: A fourth publisher to combine with the first publisher.
+    ///   - publisher4: A fifth publisher to combine with the first publisher.
+    ///   - publisher5: A sixth publisher to combine with the first publisher.
+    ///   - publisher6: A seventh publisher to combine with the first publisher.
+    /// - Returns: A publisher that receives and combines elements from this publisher and six other publishers.
     @inlinable
     func combineLatest<A: Publisher, B: Publisher, C: Publisher, D: Publisher, E: Publisher, F: Publisher, G: Publisher>(_ a: A,
                                                                                                                          _ b: B,
@@ -86,6 +121,17 @@ public extension Publisher {
             .eraseToAnyPublisher()
     }
 
+    /// Subscribes to eight additional publishers and publishes a tuple upon receiving output from any of the publishers.
+    ///
+    /// - Parameters:
+    ///   - publisher1: A second publisher to combine with the first publisher.
+    ///   - publisher2: A third publisher to combine with the first publisher.
+    ///   - publisher3: A fourth publisher to combine with the first publisher.
+    ///   - publisher4: A fifth publisher to combine with the first publisher.
+    ///   - publisher5: A sixth publisher to combine with the first publisher.
+    ///   - publisher6: A seventh publisher to combine with the first publisher.
+    ///   - publisher7: A eighth publisher to combine with the first publisher.
+    /// - Returns: A publisher that receives and combines elements from this publisher and seven other publishers.
     @inlinable
     func combineLatest<A: Publisher, B: Publisher, C: Publisher, D: Publisher, E: Publisher, F: Publisher, G: Publisher, H: Publisher>(_ a: A,
                                                                                                                                        _ b: B,
@@ -110,6 +156,18 @@ public extension Publisher {
             .eraseToAnyPublisher()
     }
 
+    /// Subscribes to nine additional publishers and publishes a tuple upon receiving output from any of the publishers.
+    ///
+    /// - Parameters:
+    ///   - publisher1: A second publisher to combine with the first publisher.
+    ///   - publisher2: A third publisher to combine with the first publisher.
+    ///   - publisher3: A fourth publisher to combine with the first publisher.
+    ///   - publisher4: A fifth publisher to combine with the first publisher.
+    ///   - publisher5: A sixth publisher to combine with the first publisher.
+    ///   - publisher6: A seventh publisher to combine with the first publisher.
+    ///   - publisher7: A eighth publisher to combine with the first publisher.
+    ///   - publisher8: A ninth publisher to combine with the first publisher.
+    /// - Returns: A publisher that receives and combines elements from this publisher and eight other publishers.
     @inlinable
     func combineLatest<A: Publisher, B: Publisher, C: Publisher, D: Publisher, E: Publisher, F: Publisher, G: Publisher, H: Publisher, I: Publisher>(_ a: A,
                                                                                                                                                      _ b: B,
@@ -136,6 +194,19 @@ public extension Publisher {
             .eraseToAnyPublisher()
     }
 
+    /// Subscribes to ten additional publishers and publishes a tuple upon receiving output from any of the publishers.
+    ///
+    /// - Parameters:
+    ///   - publisher1: A second publisher to combine with the first publisher.
+    ///   - publisher2: A third publisher to combine with the first publisher.
+    ///   - publisher3: A fourth publisher to combine with the first publisher.
+    ///   - publisher4: A fifth publisher to combine with the first publisher.
+    ///   - publisher5: A sixth publisher to combine with the first publisher.
+    ///   - publisher6: A seventh publisher to combine with the first publisher.
+    ///   - publisher7: A eighth publisher to combine with the first publisher.
+    ///   - publisher8: A ninth publisher to combine with the first publisher.
+    ///   - publisher9: A tenth publisher to combine with the first publisher.
+    /// - Returns: A publisher that receives and combines elements from this publisher and nine other publishers.
     @inlinable
     func combineLatest<A: Publisher, B: Publisher, C: Publisher, D: Publisher, E: Publisher, F: Publisher, G: Publisher, H: Publisher, I: Publisher, J: Publisher>(_ a: A,
                                                                                                                                                                    _ b: B,
@@ -164,6 +235,20 @@ public extension Publisher {
             .eraseToAnyPublisher()
     }
 
+    /// Subscribes to eleven additional publishers and publishes a tuple upon receiving output from any of the publishers.
+    ///
+    /// - Parameters:
+    ///   - publisher1: A second publisher to combine with the first publisher.
+    ///   - publisher2: A third publisher to combine with the first publisher.
+    ///   - publisher3: A fourth publisher to combine with the first publisher.
+    ///   - publisher4: A fifth publisher to combine with the first publisher.
+    ///   - publisher5: A sixth publisher to combine with the first publisher.
+    ///   - publisher6: A seventh publisher to combine with the first publisher.
+    ///   - publisher7: A eighth publisher to combine with the first publisher.
+    ///   - publisher8: A ninth publisher to combine with the first publisher.
+    ///   - publisher9: A tenth publisher to combine with the first publisher.
+    ///   - publisher10: A eleventh publisher to combine with the first publisher.
+    /// - Returns: A publisher that receives and combines elements from this publisher and ten other publishers.
     @inlinable
     func combineLatest<A: Publisher, B: Publisher, C: Publisher, D: Publisher, E: Publisher, F: Publisher, G: Publisher, H: Publisher, I: Publisher, J: Publisher, K: Publisher>(_ a: A,
                                                                                                                                                                                  _ b: B,
@@ -194,6 +279,21 @@ public extension Publisher {
             .eraseToAnyPublisher()
     }
 
+    /// Subscribes to twelve additional publishers and publishes a tuple upon receiving output from any of the publishers.
+    ///
+    /// - Parameters:
+    ///   - publisher1: A second publisher to combine with the first publisher.
+    ///   - publisher2: A third publisher to combine with the first publisher.
+    ///   - publisher3: A fourth publisher to combine with the first publisher.
+    ///   - publisher4: A fifth publisher to combine with the first publisher.
+    ///   - publisher5: A sixth publisher to combine with the first publisher.
+    ///   - publisher6: A seventh publisher to combine with the first publisher.
+    ///   - publisher7: A eighth publisher to combine with the first publisher.
+    ///   - publisher8: A ninth publisher to combine with the first publisher.
+    ///   - publisher9: A tenth publisher to combine with the first publisher.
+    ///   - publisher10: A eleventh publisher to combine with the first publisher.
+    ///   - publisher11: A twelfth publisher to combine with the first publisher.
+    /// - Returns: A publisher that receives and combines elements from this publisher and eleven other publishers.
     @inlinable
     func combineLatest<A: Publisher, B: Publisher, C: Publisher, D: Publisher, E: Publisher, F: Publisher, G: Publisher, H: Publisher, I: Publisher, J: Publisher, K: Publisher, L: Publisher>(_ a: A,
                                                                                                                                                                                                _ b: B,
@@ -226,6 +326,22 @@ public extension Publisher {
             .eraseToAnyPublisher()
     }
 
+    /// Subscribes to thirteen additional publishers and publishes a tuple upon receiving output from any of the publishers.
+    ///
+    /// - Parameters:
+    ///   - publisher1: A second publisher to combine with the first publisher.
+    ///   - publisher2: A third publisher to combine with the first publisher.
+    ///   - publisher3: A fourth publisher to combine with the first publisher.
+    ///   - publisher4: A fifth publisher to combine with the first publisher.
+    ///   - publisher5: A sixth publisher to combine with the first publisher.
+    ///   - publisher6: A seventh publisher to combine with the first publisher.
+    ///   - publisher7: A eighth publisher to combine with the first publisher.
+    ///   - publisher8: A ninth publisher to combine with the first publisher.
+    ///   - publisher9: A tenth publisher to combine with the first publisher.
+    ///   - publisher10: A eleventh publisher to combine with the first publisher.
+    ///   - publisher11: A twelfth publisher to combine with the first publisher.
+    ///   - publisher12: A thirteenth publisher to combine with the first publisher.
+    /// - Returns: A publisher that receives and combines elements from this publisher and twelve other publishers.
     @inlinable
     func combineLatest<A: Publisher, B: Publisher, C: Publisher, D: Publisher, E: Publisher, F: Publisher, G: Publisher, H: Publisher, I: Publisher, J: Publisher, K: Publisher, L: Publisher, M: Publisher>(_ a: A,
                                                                                                                                                                                                              _ b: B,
@@ -260,6 +376,23 @@ public extension Publisher {
             .eraseToAnyPublisher()
     }
 
+    /// Subscribes to fourteen additional publishers and publishes a tuple upon receiving output from any of the publishers.
+    ///
+    /// - Parameters:
+    ///   - publisher1: A second publisher to combine with the first publisher.
+    ///   - publisher2: A third publisher to combine with the first publisher.
+    ///   - publisher3: A fourth publisher to combine with the first publisher.
+    ///   - publisher4: A fifth publisher to combine with the first publisher.
+    ///   - publisher5: A sixth publisher to combine with the first publisher.
+    ///   - publisher6: A seventh publisher to combine with the first publisher.
+    ///   - publisher7: A eighth publisher to combine with the first publisher.
+    ///   - publisher8: A ninth publisher to combine with the first publisher.
+    ///   - publisher9: A tenth publisher to combine with the first publisher.
+    ///   - publisher10: A eleventh publisher to combine with the first publisher.
+    ///   - publisher11: A twelfth publisher to combine with the first publisher.
+    ///   - publisher12: A thirteenth publisher to combine with the first publisher.
+    ///   - publisher13: A fourteenth publisher to combine with the first publisher.
+    /// - Returns: A publisher that receives and combines elements from this publisher and thirteen other publishers.
     @inlinable
     func combineLatest<A: Publisher, B: Publisher, C: Publisher, D: Publisher, E: Publisher, F: Publisher, G: Publisher, H: Publisher, I: Publisher, J: Publisher, K: Publisher, L: Publisher, M: Publisher, N: Publisher>(_ a: A,
                                                                                                                                                                                                                            _ b: B,
@@ -296,6 +429,24 @@ public extension Publisher {
             .eraseToAnyPublisher()
     }
 
+    /// Subscribes to fifteen additional publishers and publishes a tuple upon receiving output from any of the publishers.
+    ///
+    /// - Parameters:
+    ///   - publisher1: A second publisher to combine with the first publisher.
+    ///   - publisher2: A third publisher to combine with the first publisher.
+    ///   - publisher3: A fourth publisher to combine with the first publisher.
+    ///   - publisher4: A fifth publisher to combine with the first publisher.
+    ///   - publisher5: A sixth publisher to combine with the first publisher.
+    ///   - publisher6: A seventh publisher to combine with the first publisher.
+    ///   - publisher7: A eighth publisher to combine with the first publisher.
+    ///   - publisher8: A ninth publisher to combine with the first publisher.
+    ///   - publisher9: A tenth publisher to combine with the first publisher.
+    ///   - publisher10: A eleventh publisher to combine with the first publisher.
+    ///   - publisher11: A twelfth publisher to combine with the first publisher.
+    ///   - publisher12: A thirteenth publisher to combine with the first publisher.
+    ///   - publisher13: A fourteenth publisher to combine with the first publisher.
+    ///   - publisher14: A fifteenth publisher to combine with the first publisher.
+    /// - Returns: A publisher that receives and combines elements from this publisher and fourteen other publishers.
     @inlinable
     func combineLatest<A: Publisher, B: Publisher, C: Publisher, D: Publisher, E: Publisher, F: Publisher, G: Publisher, H: Publisher, I: Publisher, J: Publisher, K: Publisher, L: Publisher, M: Publisher, N: Publisher, O: Publisher>(_ a: A,
                                                                                                                                                                                                                                          _ b: B,
@@ -334,6 +485,25 @@ public extension Publisher {
             .eraseToAnyPublisher()
     }
 
+    /// Subscribes to sixteen additional publishers and publishes a tuple upon receiving output from any of the publishers.
+    ///
+    /// - Parameters:
+    ///   - publisher1: A second publisher to combine with the first publisher.
+    ///   - publisher2: A third publisher to combine with the first publisher.
+    ///   - publisher3: A fourth publisher to combine with the first publisher.
+    ///   - publisher4: A fifth publisher to combine with the first publisher.
+    ///   - publisher5: A sixth publisher to combine with the first publisher.
+    ///   - publisher6: A seventh publisher to combine with the first publisher.
+    ///   - publisher7: A eighth publisher to combine with the first publisher.
+    ///   - publisher8: A ninth publisher to combine with the first publisher.
+    ///   - publisher9: A tenth publisher to combine with the first publisher.
+    ///   - publisher10: A eleventh publisher to combine with the first publisher.
+    ///   - publisher11: A twelfth publisher to combine with the first publisher.
+    ///   - publisher12: A thirteenth publisher to combine with the first publisher.
+    ///   - publisher13: A fourteenth publisher to combine with the first publisher.
+    ///   - publisher14: A fifteenth publisher to combine with the first publisher.
+    ///   - publisher15: A sixteenth publisher to combine with the first publisher.
+    /// - Returns: A publisher that receives and combines elements from this publisher and fifteen other publishers.
     @inlinable
     func combineLatest<A: Publisher, B: Publisher, C: Publisher, D: Publisher, E: Publisher, F: Publisher, G: Publisher, H: Publisher, I: Publisher, J: Publisher, K: Publisher, L: Publisher, M: Publisher, N: Publisher, O: Publisher, P: Publisher>(_ a: A,
                                                                                                                                                                                                                                                        _ b: B,
@@ -374,6 +544,26 @@ public extension Publisher {
             .eraseToAnyPublisher()
     }
 
+    /// Subscribes to seventeen additional publishers and publishes a tuple upon receiving output from any of the publishers.
+    ///
+    /// - Parameters:
+    ///   - publisher1: A second publisher to combine with the first publisher.
+    ///   - publisher2: A third publisher to combine with the first publisher.
+    ///   - publisher3: A fourth publisher to combine with the first publisher.
+    ///   - publisher4: A fifth publisher to combine with the first publisher.
+    ///   - publisher5: A sixth publisher to combine with the first publisher.
+    ///   - publisher6: A seventh publisher to combine with the first publisher.
+    ///   - publisher7: A eighth publisher to combine with the first publisher.
+    ///   - publisher8: A ninth publisher to combine with the first publisher.
+    ///   - publisher9: A tenth publisher to combine with the first publisher.
+    ///   - publisher10: A eleventh publisher to combine with the first publisher.
+    ///   - publisher11: A twelfth publisher to combine with the first publisher.
+    ///   - publisher12: A thirteenth publisher to combine with the first publisher.
+    ///   - publisher13: A fourteenth publisher to combine with the first publisher.
+    ///   - publisher14: A fifteenth publisher to combine with the first publisher.
+    ///   - publisher15: A sixteenth publisher to combine with the first publisher.
+    ///   - publisher16: A seventeenth publisher to combine with the first publisher.
+    /// - Returns: A publisher that receives and combines elements from this publisher and sixteen other publishers.
     @inlinable
     func combineLatest<A: Publisher, B: Publisher, C: Publisher, D: Publisher, E: Publisher, F: Publisher, G: Publisher, H: Publisher, I: Publisher, J: Publisher, K: Publisher, L: Publisher, M: Publisher, N: Publisher, O: Publisher, P: Publisher, Q: Publisher>(_ a: A,
                                                                                                                                                                                                                                                                      _ b: B,
@@ -416,6 +606,27 @@ public extension Publisher {
             .eraseToAnyPublisher()
     }
 
+    /// Subscribes to eighteen additional publishers and publishes a tuple upon receiving output from any of the publishers.
+    ///
+    /// - Parameters:
+    ///   - publisher1: A second publisher to combine with the first publisher.
+    ///   - publisher2: A third publisher to combine with the first publisher.
+    ///   - publisher3: A fourth publisher to combine with the first publisher.
+    ///   - publisher4: A fifth publisher to combine with the first publisher.
+    ///   - publisher5: A sixth publisher to combine with the first publisher.
+    ///   - publisher6: A seventh publisher to combine with the first publisher.
+    ///   - publisher7: A eighth publisher to combine with the first publisher.
+    ///   - publisher8: A ninth publisher to combine with the first publisher.
+    ///   - publisher9: A tenth publisher to combine with the first publisher.
+    ///   - publisher10: A eleventh publisher to combine with the first publisher.
+    ///   - publisher11: A twelfth publisher to combine with the first publisher.
+    ///   - publisher12: A thirteenth publisher to combine with the first publisher.
+    ///   - publisher13: A fourteenth publisher to combine with the first publisher.
+    ///   - publisher14: A fifteenth publisher to combine with the first publisher.
+    ///   - publisher15: A sixteenth publisher to combine with the first publisher.
+    ///   - publisher16: A seventeenth publisher to combine with the first publisher.
+    ///   - publisher17: A eighteenth publisher to combine with the first publisher.
+    /// - Returns: A publisher that receives and combines elements from this publisher and seventeen other publishers.
     @inlinable
     func combineLatest<A: Publisher, B: Publisher, C: Publisher, D: Publisher, E: Publisher, F: Publisher, G: Publisher, H: Publisher, I: Publisher, J: Publisher, K: Publisher, L: Publisher, M: Publisher, N: Publisher, O: Publisher, P: Publisher, Q: Publisher, R: Publisher>(_ a: A,
                                                                                                                                                                                                                                                                                    _ b: B,
@@ -460,6 +671,28 @@ public extension Publisher {
             .eraseToAnyPublisher()
     }
 
+    /// Subscribes to nineteen additional publishers and publishes a tuple upon receiving output from any of the publishers.
+    ///
+    /// - Parameters:
+    ///   - publisher1: A second publisher to combine with the first publisher.
+    ///   - publisher2: A third publisher to combine with the first publisher.
+    ///   - publisher3: A fourth publisher to combine with the first publisher.
+    ///   - publisher4: A fifth publisher to combine with the first publisher.
+    ///   - publisher5: A sixth publisher to combine with the first publisher.
+    ///   - publisher6: A seventh publisher to combine with the first publisher.
+    ///   - publisher7: A eighth publisher to combine with the first publisher.
+    ///   - publisher8: A ninth publisher to combine with the first publisher.
+    ///   - publisher9: A tenth publisher to combine with the first publisher.
+    ///   - publisher10: A eleventh publisher to combine with the first publisher.
+    ///   - publisher11: A twelfth publisher to combine with the first publisher.
+    ///   - publisher12: A thirteenth publisher to combine with the first publisher.
+    ///   - publisher13: A fourteenth publisher to combine with the first publisher.
+    ///   - publisher14: A fifteenth publisher to combine with the first publisher.
+    ///   - publisher15: A sixteenth publisher to combine with the first publisher.
+    ///   - publisher16: A seventeenth publisher to combine with the first publisher.
+    ///   - publisher17: A eighteenth publisher to combine with the first publisher.
+    ///   - publisher18: A nineteenth publisher to combine with the first publisher.
+    /// - Returns: A publisher that receives and combines elements from this publisher and eighteen other publishers.
     @inlinable
     func combineLatest<A: Publisher, B: Publisher, C: Publisher, D: Publisher, E: Publisher, F: Publisher, G: Publisher, H: Publisher, I: Publisher, J: Publisher, K: Publisher, L: Publisher, M: Publisher, N: Publisher, O: Publisher, P: Publisher, Q: Publisher, R: Publisher, S: Publisher>(_ a: A,
                                                                                                                                                                                                                                                                                                  _ b: B,
@@ -506,6 +739,29 @@ public extension Publisher {
             .eraseToAnyPublisher()
     }
 
+    /// Subscribes to twenty additional publishers and publishes a tuple upon receiving output from any of the publishers.
+    ///
+    /// - Parameters:
+    ///   - publisher1: A second publisher to combine with the first publisher.
+    ///   - publisher2: A third publisher to combine with the first publisher.
+    ///   - publisher3: A fourth publisher to combine with the first publisher.
+    ///   - publisher4: A fifth publisher to combine with the first publisher.
+    ///   - publisher5: A sixth publisher to combine with the first publisher.
+    ///   - publisher6: A seventh publisher to combine with the first publisher.
+    ///   - publisher7: A eighth publisher to combine with the first publisher.
+    ///   - publisher8: A ninth publisher to combine with the first publisher.
+    ///   - publisher9: A tenth publisher to combine with the first publisher.
+    ///   - publisher10: A eleventh publisher to combine with the first publisher.
+    ///   - publisher11: A twelfth publisher to combine with the first publisher.
+    ///   - publisher12: A thirteenth publisher to combine with the first publisher.
+    ///   - publisher13: A fourteenth publisher to combine with the first publisher.
+    ///   - publisher14: A fifteenth publisher to combine with the first publisher.
+    ///   - publisher15: A sixteenth publisher to combine with the first publisher.
+    ///   - publisher16: A seventeenth publisher to combine with the first publisher.
+    ///   - publisher17: A eighteenth publisher to combine with the first publisher.
+    ///   - publisher18: A nineteenth publisher to combine with the first publisher.
+    ///   - publisher19: A twentieth publisher to combine with the first publisher.
+    /// - Returns: A publisher that receives and combines elements from this publisher and nineteen other publishers.
     @inlinable
     func combineLatest<A: Publisher, B: Publisher, C: Publisher, D: Publisher, E: Publisher, F: Publisher, G: Publisher, H: Publisher, I: Publisher, J: Publisher, K: Publisher, L: Publisher, M: Publisher, N: Publisher, O: Publisher, P: Publisher, Q: Publisher, R: Publisher, S: Publisher, T: Publisher>(_ a: A,
                                                                                                                                                                                                                                                                                                                _ b: B,
@@ -554,6 +810,30 @@ public extension Publisher {
             .eraseToAnyPublisher()
     }
 
+    /// Subscribes to twenty-one additional publishers and publishes a tuple upon receiving output from any of the publishers.
+    ///
+    /// - Parameters:
+    ///   - publisher1: A second publisher to combine with the first publisher.
+    ///   - publisher2: A third publisher to combine with the first publisher.
+    ///   - publisher3: A fourth publisher to combine with the first publisher.
+    ///   - publisher4: A fifth publisher to combine with the first publisher.
+    ///   - publisher5: A sixth publisher to combine with the first publisher.
+    ///   - publisher6: A seventh publisher to combine with the first publisher.
+    ///   - publisher7: A eighth publisher to combine with the first publisher.
+    ///   - publisher8: A ninth publisher to combine with the first publisher.
+    ///   - publisher9: A tenth publisher to combine with the first publisher.
+    ///   - publisher10: A eleventh publisher to combine with the first publisher.
+    ///   - publisher11: A twelfth publisher to combine with the first publisher.
+    ///   - publisher12: A thirteenth publisher to combine with the first publisher.
+    ///   - publisher13: A fourteenth publisher to combine with the first publisher.
+    ///   - publisher14: A fifteenth publisher to combine with the first publisher.
+    ///   - publisher15: A sixteenth publisher to combine with the first publisher.
+    ///   - publisher16: A seventeenth publisher to combine with the first publisher.
+    ///   - publisher17: A eighteenth publisher to combine with the first publisher.
+    ///   - publisher18: A nineteenth publisher to combine with the first publisher.
+    ///   - publisher19: A twentieth publisher to combine with the first publisher.
+    ///   - publisher20: A twenty-first publisher to combine with the first publisher.
+    /// - Returns: A publisher that receives and combines elements from this publisher and twenty other publishers.
     @inlinable
     func combineLatest<A: Publisher, B: Publisher, C: Publisher, D: Publisher, E: Publisher, F: Publisher, G: Publisher, H: Publisher, I: Publisher, J: Publisher, K: Publisher, L: Publisher, M: Publisher, N: Publisher, O: Publisher, P: Publisher, Q: Publisher, R: Publisher, S: Publisher, T: Publisher, U: Publisher>(_ a: A,
                                                                                                                                                                                                                                                                                                                              _ b: B,
@@ -604,6 +884,31 @@ public extension Publisher {
             .eraseToAnyPublisher()
     }
 
+    /// Subscribes to twenty-two additional publishers and publishes a tuple upon receiving output from any of the publishers.
+    ///
+    /// - Parameters:
+    ///   - publisher1: A second publisher to combine with the first publisher.
+    ///   - publisher2: A third publisher to combine with the first publisher.
+    ///   - publisher3: A fourth publisher to combine with the first publisher.
+    ///   - publisher4: A fifth publisher to combine with the first publisher.
+    ///   - publisher5: A sixth publisher to combine with the first publisher.
+    ///   - publisher6: A seventh publisher to combine with the first publisher.
+    ///   - publisher7: A eighth publisher to combine with the first publisher.
+    ///   - publisher8: A ninth publisher to combine with the first publisher.
+    ///   - publisher9: A tenth publisher to combine with the first publisher.
+    ///   - publisher10: A eleventh publisher to combine with the first publisher.
+    ///   - publisher11: A twelfth publisher to combine with the first publisher.
+    ///   - publisher12: A thirteenth publisher to combine with the first publisher.
+    ///   - publisher13: A fourteenth publisher to combine with the first publisher.
+    ///   - publisher14: A fifteenth publisher to combine with the first publisher.
+    ///   - publisher15: A sixteenth publisher to combine with the first publisher.
+    ///   - publisher16: A seventeenth publisher to combine with the first publisher.
+    ///   - publisher17: A eighteenth publisher to combine with the first publisher.
+    ///   - publisher18: A nineteenth publisher to combine with the first publisher.
+    ///   - publisher19: A twentieth publisher to combine with the first publisher.
+    ///   - publisher20: A twenty-first publisher to combine with the first publisher.
+    ///   - publisher21: A twenty-second publisher to combine with the first publisher.
+    /// - Returns: A publisher that receives and combines elements from this publisher and twenty-one other publishers.
     @inlinable
     func combineLatest<A: Publisher, B: Publisher, C: Publisher, D: Publisher, E: Publisher, F: Publisher, G: Publisher, H: Publisher, I: Publisher, J: Publisher, K: Publisher, L: Publisher, M: Publisher, N: Publisher, O: Publisher, P: Publisher, Q: Publisher, R: Publisher, S: Publisher, T: Publisher, U: Publisher, V: Publisher>(_ a: A,
                                                                                                                                                                                                                                                                                                                                            _ b: B,
@@ -656,6 +961,32 @@ public extension Publisher {
             .eraseToAnyPublisher()
     }
 
+    /// Subscribes to twenty-three additional publishers and publishes a tuple upon receiving output from any of the publishers.
+    ///
+    /// - Parameters:
+    ///   - publisher1: A second publisher to combine with the first publisher.
+    ///   - publisher2: A third publisher to combine with the first publisher.
+    ///   - publisher3: A fourth publisher to combine with the first publisher.
+    ///   - publisher4: A fifth publisher to combine with the first publisher.
+    ///   - publisher5: A sixth publisher to combine with the first publisher.
+    ///   - publisher6: A seventh publisher to combine with the first publisher.
+    ///   - publisher7: A eighth publisher to combine with the first publisher.
+    ///   - publisher8: A ninth publisher to combine with the first publisher.
+    ///   - publisher9: A tenth publisher to combine with the first publisher.
+    ///   - publisher10: A eleventh publisher to combine with the first publisher.
+    ///   - publisher11: A twelfth publisher to combine with the first publisher.
+    ///   - publisher12: A thirteenth publisher to combine with the first publisher.
+    ///   - publisher13: A fourteenth publisher to combine with the first publisher.
+    ///   - publisher14: A fifteenth publisher to combine with the first publisher.
+    ///   - publisher15: A sixteenth publisher to combine with the first publisher.
+    ///   - publisher16: A seventeenth publisher to combine with the first publisher.
+    ///   - publisher17: A eighteenth publisher to combine with the first publisher.
+    ///   - publisher18: A nineteenth publisher to combine with the first publisher.
+    ///   - publisher19: A twentieth publisher to combine with the first publisher.
+    ///   - publisher20: A twenty-first publisher to combine with the first publisher.
+    ///   - publisher21: A twenty-second publisher to combine with the first publisher.
+    ///   - publisher22: A twenty-third publisher to combine with the first publisher.
+    /// - Returns: A publisher that receives and combines elements from this publisher and twenty-two other publishers.
     @inlinable
     func combineLatest<A: Publisher, B: Publisher, C: Publisher, D: Publisher, E: Publisher, F: Publisher, G: Publisher, H: Publisher, I: Publisher, J: Publisher, K: Publisher, L: Publisher, M: Publisher, N: Publisher, O: Publisher, P: Publisher, Q: Publisher, R: Publisher, S: Publisher, T: Publisher, U: Publisher, V: Publisher, W: Publisher>(_ a: A,
                                                                                                                                                                                                                                                                                                                                                          _ b: B,
@@ -710,6 +1041,33 @@ public extension Publisher {
             .eraseToAnyPublisher()
     }
 
+    /// Subscribes to twenty-four additional publishers and publishes a tuple upon receiving output from any of the publishers.
+    ///
+    /// - Parameters:
+    ///   - publisher1: A second publisher to combine with the first publisher.
+    ///   - publisher2: A third publisher to combine with the first publisher.
+    ///   - publisher3: A fourth publisher to combine with the first publisher.
+    ///   - publisher4: A fifth publisher to combine with the first publisher.
+    ///   - publisher5: A sixth publisher to combine with the first publisher.
+    ///   - publisher6: A seventh publisher to combine with the first publisher.
+    ///   - publisher7: A eighth publisher to combine with the first publisher.
+    ///   - publisher8: A ninth publisher to combine with the first publisher.
+    ///   - publisher9: A tenth publisher to combine with the first publisher.
+    ///   - publisher10: A eleventh publisher to combine with the first publisher.
+    ///   - publisher11: A twelfth publisher to combine with the first publisher.
+    ///   - publisher12: A thirteenth publisher to combine with the first publisher.
+    ///   - publisher13: A fourteenth publisher to combine with the first publisher.
+    ///   - publisher14: A fifteenth publisher to combine with the first publisher.
+    ///   - publisher15: A sixteenth publisher to combine with the first publisher.
+    ///   - publisher16: A seventeenth publisher to combine with the first publisher.
+    ///   - publisher17: A eighteenth publisher to combine with the first publisher.
+    ///   - publisher18: A nineteenth publisher to combine with the first publisher.
+    ///   - publisher19: A twentieth publisher to combine with the first publisher.
+    ///   - publisher20: A twenty-first publisher to combine with the first publisher.
+    ///   - publisher21: A twenty-second publisher to combine with the first publisher.
+    ///   - publisher22: A twenty-third publisher to combine with the first publisher.
+    ///   - publisher23: A twenty-fourth publisher to combine with the first publisher.
+    /// - Returns: A publisher that receives and combines elements from this publisher and twenty-three other publishers.
     @inlinable
     func combineLatest<A: Publisher, B: Publisher, C: Publisher, D: Publisher, E: Publisher, F: Publisher, G: Publisher, H: Publisher, I: Publisher, J: Publisher, K: Publisher, L: Publisher, M: Publisher, N: Publisher, O: Publisher, P: Publisher, Q: Publisher, R: Publisher, S: Publisher, T: Publisher, U: Publisher, V: Publisher, W: Publisher, X: Publisher>(_ a: A,
                                                                                                                                                                                                                                                                                                                                                                        _ b: B,
@@ -766,6 +1124,34 @@ public extension Publisher {
             .eraseToAnyPublisher()
     }
 
+    /// Subscribes to twenty-five additional publishers and publishes a tuple upon receiving output from any of the publishers.
+    ///
+    /// - Parameters:
+    ///   - publisher1: A second publisher to combine with the first publisher.
+    ///   - publisher2: A third publisher to combine with the first publisher.
+    ///   - publisher3: A fourth publisher to combine with the first publisher.
+    ///   - publisher4: A fifth publisher to combine with the first publisher.
+    ///   - publisher5: A sixth publisher to combine with the first publisher.
+    ///   - publisher6: A seventh publisher to combine with the first publisher.
+    ///   - publisher7: A eighth publisher to combine with the first publisher.
+    ///   - publisher8: A ninth publisher to combine with the first publisher.
+    ///   - publisher9: A tenth publisher to combine with the first publisher.
+    ///   - publisher10: A eleventh publisher to combine with the first publisher.
+    ///   - publisher11: A twelfth publisher to combine with the first publisher.
+    ///   - publisher12: A thirteenth publisher to combine with the first publisher.
+    ///   - publisher13: A fourteenth publisher to combine with the first publisher.
+    ///   - publisher14: A fifteenth publisher to combine with the first publisher.
+    ///   - publisher15: A sixteenth publisher to combine with the first publisher.
+    ///   - publisher16: A seventeenth publisher to combine with the first publisher.
+    ///   - publisher17: A eighteenth publisher to combine with the first publisher.
+    ///   - publisher18: A nineteenth publisher to combine with the first publisher.
+    ///   - publisher19: A twentieth publisher to combine with the first publisher.
+    ///   - publisher20: A twenty-first publisher to combine with the first publisher.
+    ///   - publisher21: A twenty-second publisher to combine with the first publisher.
+    ///   - publisher22: A twenty-third publisher to combine with the first publisher.
+    ///   - publisher23: A twenty-fourth publisher to combine with the first publisher.
+    ///   - publisher24: A twenty-fifth publisher to combine with the first publisher.
+    /// - Returns: A publisher that receives and combines elements from this publisher and twenty-four other publishers.
     @inlinable
     func combineLatest<A: Publisher, B: Publisher, C: Publisher, D: Publisher, E: Publisher, F: Publisher, G: Publisher, H: Publisher, I: Publisher, J: Publisher, K: Publisher, L: Publisher, M: Publisher, N: Publisher, O: Publisher, P: Publisher, Q: Publisher, R: Publisher, S: Publisher, T: Publisher, U: Publisher, V: Publisher, W: Publisher, X: Publisher, Y: Publisher>(_ a: A,
                                                                                                                                                                                                                                                                                                                                                                                      _ b: B,
@@ -824,6 +1210,35 @@ public extension Publisher {
             .eraseToAnyPublisher()
     }
 
+    /// Subscribes to twenty-six additional publishers and publishes a tuple upon receiving output from any of the publishers.
+    ///
+    /// - Parameters:
+    ///   - publisher1: A second publisher to combine with the first publisher.
+    ///   - publisher2: A third publisher to combine with the first publisher.
+    ///   - publisher3: A fourth publisher to combine with the first publisher.
+    ///   - publisher4: A fifth publisher to combine with the first publisher.
+    ///   - publisher5: A sixth publisher to combine with the first publisher.
+    ///   - publisher6: A seventh publisher to combine with the first publisher.
+    ///   - publisher7: A eighth publisher to combine with the first publisher.
+    ///   - publisher8: A ninth publisher to combine with the first publisher.
+    ///   - publisher9: A tenth publisher to combine with the first publisher.
+    ///   - publisher10: A eleventh publisher to combine with the first publisher.
+    ///   - publisher11: A twelfth publisher to combine with the first publisher.
+    ///   - publisher12: A thirteenth publisher to combine with the first publisher.
+    ///   - publisher13: A fourteenth publisher to combine with the first publisher.
+    ///   - publisher14: A fifteenth publisher to combine with the first publisher.
+    ///   - publisher15: A sixteenth publisher to combine with the first publisher.
+    ///   - publisher16: A seventeenth publisher to combine with the first publisher.
+    ///   - publisher17: A eighteenth publisher to combine with the first publisher.
+    ///   - publisher18: A nineteenth publisher to combine with the first publisher.
+    ///   - publisher19: A twentieth publisher to combine with the first publisher.
+    ///   - publisher20: A twenty-first publisher to combine with the first publisher.
+    ///   - publisher21: A twenty-second publisher to combine with the first publisher.
+    ///   - publisher22: A twenty-third publisher to combine with the first publisher.
+    ///   - publisher23: A twenty-fourth publisher to combine with the first publisher.
+    ///   - publisher24: A twenty-fifth publisher to combine with the first publisher.
+    ///   - publisher25: A twenty-sixth publisher to combine with the first publisher.
+    /// - Returns: A publisher that receives and combines elements from this publisher and twenty-five other publishers.
     @inlinable
     func combineLatest<A: Publisher, B: Publisher, C: Publisher, D: Publisher, E: Publisher, F: Publisher, G: Publisher, H: Publisher, I: Publisher, J: Publisher, K: Publisher, L: Publisher, M: Publisher, N: Publisher, O: Publisher, P: Publisher, Q: Publisher, R: Publisher, S: Publisher, T: Publisher, U: Publisher, V: Publisher, W: Publisher, X: Publisher, Y: Publisher, Z: Publisher>(_ a: A,
                                                                                                                                                                                                                                                                                                                                                                                                    _ b: B,
