@@ -50,7 +50,7 @@ internal final class CombineLatestArityTests: XCTestCase {
         super.tearDown()
     }
 
-    func testCombineLatest5() throws {
+    func testCombineLatest5() {
         let combinedPublisher = scheduler.start { () -> AnyPublisher<[Int], NSError> in
             return createPublisher(emitting: 1,
                                    at: 1,
@@ -79,7 +79,7 @@ internal final class CombineLatestArityTests: XCTestCase {
         XCTAssertEqual(combinedPublisher.recordedOutput, expectedResults)
     }
 
-    func testCombineLatest6() throws {
+    func testCombineLatest6() {
         let combinedPublisher = scheduler.start { () -> AnyPublisher<[Int], NSError> in
             return createPublisher(emitting: 1,
                                    at: 1,
@@ -111,7 +111,7 @@ internal final class CombineLatestArityTests: XCTestCase {
         XCTAssertEqual(combinedPublisher.recordedOutput, expectedResults)
     }
 
-    func testCombineLatest7() throws {
+    func testCombineLatest7() {
         let combinedPublisher = scheduler.start { () -> AnyPublisher<[Int], NSError> in
             return createPublisher(emitting: 1,
                                    at: 1,
@@ -146,7 +146,7 @@ internal final class CombineLatestArityTests: XCTestCase {
         XCTAssertEqual(combinedPublisher.recordedOutput, expectedResults)
     }
 
-    func testCombineLatest8() throws {
+    func testCombineLatest8() {
         let combinedPublisher = scheduler.start { () -> AnyPublisher<[Int], NSError> in
             return createPublisher(emitting: 1,
                                    at: 1,
@@ -184,7 +184,7 @@ internal final class CombineLatestArityTests: XCTestCase {
         XCTAssertEqual(combinedPublisher.recordedOutput, expectedResults)
     }
 
-    func testCombineLatest9() throws {
+    func testCombineLatest9() {
         let combinedPublisher = scheduler.start { () -> AnyPublisher<[Int], NSError> in
             return createPublisher(emitting: 1,
                                    at: 1,
@@ -225,7 +225,7 @@ internal final class CombineLatestArityTests: XCTestCase {
         XCTAssertEqual(combinedPublisher.recordedOutput, expectedResults)
     }
 
-    func testCombineLatest10() throws {
+    func testCombineLatest10() {
         let combinedPublisher = scheduler.start { () -> AnyPublisher<[Int], NSError> in
             return createPublisher(emitting: 1,
                                    at: 1,
@@ -269,7 +269,7 @@ internal final class CombineLatestArityTests: XCTestCase {
         XCTAssertEqual(combinedPublisher.recordedOutput, expectedResults)
     }
 
-    func testCombineLatest11() throws {
+    func testCombineLatest11() {
         let combinedPublisher = scheduler.start { () -> AnyPublisher<[Int], NSError> in
             return createPublisher(emitting: 1,
                                    at: 1,
@@ -316,7 +316,7 @@ internal final class CombineLatestArityTests: XCTestCase {
         XCTAssertEqual(combinedPublisher.recordedOutput, expectedResults)
     }
 
-    func testCombineLatest12() throws {
+    func testCombineLatest12() {
         let combinedPublisher = scheduler.start { () -> AnyPublisher<[Int], NSError> in
             return createPublisher(emitting: 1,
                                    at: 1,
@@ -366,7 +366,7 @@ internal final class CombineLatestArityTests: XCTestCase {
         XCTAssertEqual(combinedPublisher.recordedOutput, expectedResults)
     }
 
-    func testCombineLatest13() throws {
+    func testCombineLatest13() {
         let combinedPublisher = scheduler.start { () -> AnyPublisher<[Int], NSError> in
             return createPublisher(emitting: 1,
                                    at: 1,
@@ -419,7 +419,7 @@ internal final class CombineLatestArityTests: XCTestCase {
         XCTAssertEqual(combinedPublisher.recordedOutput, expectedResults)
     }
 
-    func testCombineLatest14() throws {
+    func testCombineLatest14() {
         let combinedPublisher = scheduler.start { () -> AnyPublisher<[Int], NSError> in
             return createPublisher(emitting: 1,
                                    at: 1,
@@ -475,7 +475,7 @@ internal final class CombineLatestArityTests: XCTestCase {
         XCTAssertEqual(combinedPublisher.recordedOutput, expectedResults)
     }
 
-    func testCombineLatest15() throws {
+    func testCombineLatest15() {
         let combinedPublisher = scheduler.start { () -> AnyPublisher<[Int], NSError> in
             return createPublisher(emitting: 1,
                                    at: 1,
@@ -534,7 +534,7 @@ internal final class CombineLatestArityTests: XCTestCase {
         XCTAssertEqual(combinedPublisher.recordedOutput, expectedResults)
     }
 
-    func testCombineLatest16() throws {
+    func testCombineLatest16() {
         let combinedPublisher = scheduler.start { () -> AnyPublisher<[Int], NSError> in
             return createPublisher(emitting: 1,
                                    at: 1,
@@ -596,7 +596,7 @@ internal final class CombineLatestArityTests: XCTestCase {
         XCTAssertEqual(combinedPublisher.recordedOutput, expectedResults)
     }
 
-    func testCombineLatest17() throws {
+    func testCombineLatest17() {
         let combinedPublisher = scheduler.start { () -> AnyPublisher<[Int], NSError> in
             return createPublisher(emitting: 1,
                                    at: 1,
@@ -661,7 +661,7 @@ internal final class CombineLatestArityTests: XCTestCase {
         XCTAssertEqual(combinedPublisher.recordedOutput, expectedResults)
     }
 
-    func testCombineLatest18() throws {
+    func testCombineLatest18() {
         let combinedPublisher = scheduler.start { () -> AnyPublisher<[Int], NSError> in
             return createPublisher(emitting: 1,
                                    at: 1,
@@ -729,7 +729,7 @@ internal final class CombineLatestArityTests: XCTestCase {
         XCTAssertEqual(combinedPublisher.recordedOutput, expectedResults)
     }
 
-    func testCombineLatest19() throws {
+    func testCombineLatest19() {
         let combinedPublisher = scheduler.start { () -> AnyPublisher<[Int], NSError> in
             return createPublisher(emitting: 1,
                                    at: 1,
@@ -800,7 +800,7 @@ internal final class CombineLatestArityTests: XCTestCase {
         XCTAssertEqual(combinedPublisher.recordedOutput, expectedResults)
     }
 
-    func testCombineLatest20() throws {
+    func testCombineLatest20() {
         let combinedPublisher = scheduler.start { () -> AnyPublisher<[Int], NSError> in
             return createPublisher(emitting: 1,
                                    at: 1,
@@ -874,7 +874,7 @@ internal final class CombineLatestArityTests: XCTestCase {
         XCTAssertEqual(combinedPublisher.recordedOutput, expectedResults)
     }
 
-    func testCombineLatest21() throws {
+    func testCombineLatest21() {
         let combinedPublisher = scheduler.start { () -> AnyPublisher<[Int], NSError> in
             return createPublisher(emitting: 1,
                                    at: 1,
@@ -951,7 +951,7 @@ internal final class CombineLatestArityTests: XCTestCase {
         XCTAssertEqual(combinedPublisher.recordedOutput, expectedResults)
     }
 
-    func testCombineLatest22() throws {
+    func testCombineLatest22() {
         let combinedPublisher = scheduler.start { () -> AnyPublisher<[Int], NSError> in
             return createPublisher(emitting: 1,
                                    at: 1,
@@ -1031,7 +1031,7 @@ internal final class CombineLatestArityTests: XCTestCase {
         XCTAssertEqual(combinedPublisher.recordedOutput, expectedResults)
     }
 
-    func testCombineLatest23() throws {
+    func testCombineLatest23() {
         let combinedPublisher = scheduler.start { () -> AnyPublisher<[Int], NSError> in
             return createPublisher(emitting: 1,
                                    at: 1,
@@ -1114,7 +1114,7 @@ internal final class CombineLatestArityTests: XCTestCase {
         XCTAssertEqual(combinedPublisher.recordedOutput, expectedResults)
     }
 
-    func testCombineLatest24() throws {
+    func testCombineLatest24() {
         let combinedPublisher = scheduler.start { () -> AnyPublisher<[Int], NSError> in
             return createPublisher(emitting: 1,
                                    at: 1,
@@ -1200,7 +1200,7 @@ internal final class CombineLatestArityTests: XCTestCase {
         XCTAssertEqual(combinedPublisher.recordedOutput, expectedResults)
     }
 
-    func testCombineLatest25() throws {
+    func testCombineLatest25() {
         let combinedPublisher = scheduler.start { () -> AnyPublisher<[Int], NSError> in
             return createPublisher(emitting: 1,
                                    at: 1,
@@ -1289,7 +1289,7 @@ internal final class CombineLatestArityTests: XCTestCase {
         XCTAssertEqual(combinedPublisher.recordedOutput, expectedResults)
     }
 
-    func testCombineLatest26() throws {
+    func testCombineLatest26() {
         let combinedPublisher = scheduler.start { () -> AnyPublisher<[Int], NSError> in
             return createPublisher(emitting: 1,
                                    at: 1,
@@ -1381,7 +1381,7 @@ internal final class CombineLatestArityTests: XCTestCase {
         XCTAssertEqual(combinedPublisher.recordedOutput, expectedResults)
     }
 
-    func testCombineLatest27() throws {
+    func testCombineLatest27() {
         let combinedPublisher = scheduler.start { () -> AnyPublisher<[Int], NSError> in
             return createPublisher(emitting: 1,
                                    at: 1,
