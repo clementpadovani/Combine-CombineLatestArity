@@ -28,6 +28,14 @@ dependencies: [
 ]
 ```
 
+### CocoaPods
+
+Add the following to your Podfile:
+
+```ruby
+pod 'CombineCombineLatestArity', '~> 1.0'
+```
+
 ## License
 ___
 
