@@ -56,7 +56,7 @@ jobs:
           test_os_version: ${{ matrix.os_version }}
           test_results_output_base_path: ./logs
       - uses: codecov/codecov-action@v1.0.13
-        if: ${{ matrix.os_version == "15.0" }}
+        if: ${{ matrix.os_version == 15.0 }}
         with:
           token: a42542a2-c356-4a7a-96cb-8d5ee53e43b7
           name: Combine-CombineLatestArity
