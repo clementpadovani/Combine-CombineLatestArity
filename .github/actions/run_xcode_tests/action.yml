@@ -32,7 +32,7 @@ runs:
       id: create_variables
       run: |
         echo "::set-output name=test_destination::"$(echo "${{ inputs.device_name_prefix }},OS=${{ inputs.test_os_version }}" | sed "s/,OS=REPLACE_ME//g")""
-        echo "::set-output name=html_test_results_output_path::${{ inputs.test_results_output_base_path }}/${{ inputs.platform }}-$(echo ${{ inputs.test_os_version }} | tr . _).html"
+        echo "::set-output name=html_test_results_output_path::"${{ inputs.test_results_output_base_path }}/${{ inputs.platform }}-$(echo ${{ inputs.test_os_version }} | tr . _).html""
     - shell: bash
       id: run_tests
       run: |
