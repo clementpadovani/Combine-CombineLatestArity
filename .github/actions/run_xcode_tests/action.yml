@@ -33,5 +33,5 @@ runs:
       id: run_tests
       run: |
         set -o pipefail && \
-        xcodebuild -scheme ${{ inputs.scheme }} -sdk ${{ inputs.sdk }} -destination ${{ steps.create_variables.test_destination }} -disableAutomaticPackageResolution -enableCodeCoverage YES test | \
-        xcpretty -c -r html --output ${{ steps.create_variables.html_test_results_output_path }}
+        xcodebuild -scheme ${{ inputs.scheme }} -sdk ${{ inputs.sdk }} -destination ${{ steps.create_variables.outputs.test_destination }} -disableAutomaticPackageResolution -enableCodeCoverage YES test | \
+        xcpretty -c -r html --output ${{ steps.create_variables.outputs.html_test_results_output_path }}
