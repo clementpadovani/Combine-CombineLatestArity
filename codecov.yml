@@ -1,0 +1,9 @@
+ignore:
+  - "Tests/**/*"
+
+coverage:
+  status:
+    project:
+      default:
+        target: auto
+        threshold: 1%
