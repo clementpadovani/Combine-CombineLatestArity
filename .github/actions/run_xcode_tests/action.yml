@@ -3,6 +3,9 @@ inputs:
   scheme:
     description: "The scheme for tests"
     required: true
+  xcode_version:
+    description: "The name of the Xcode version to use"
+    required: true
   sdk:
     description: "The build SDK for the test"
     required: true
@@ -14,7 +17,8 @@ inputs:
     required: true
   test_os_version:
     description: "OS version of the test destination"
-    required: true
+    required: false
+    default: "REPLACE_ME"
   test_results_output_base_path:
     description: "The base path for the test results"
     required: true
@@ -27,7 +31,7 @@ runs:
     - shell: bash
       id: create_variables
       run: |
-        echo "::set-output name=test_destination::\"${{ inputs.device_name_prefix }} os=${{ inputs.test_os_version }}\""
+        echo "::set-output name=test_destination::$(echo \"${{ inputs.device_name_prefix }} os=${{ inputs.test_os_version }}\ | tr \" os=REPLACE_ME\" \"\")"
         echo "::set-output name=html_test_results_output_path::\"${{ inputs.test_results_output_base_path }}/${{ inputs.platform }}-$(echo ${{ inputs.test_os_version }} | tr . _).html\""
     - shell: bash
       id: run_tests
