@@ -35,7 +35,7 @@ jobs:
         scheme: [CombineCombineLatestArity]
         platform: [iOS]
         sdk: [iphonesimulator]
-        device_name_prefix: [name=iPhone 11 Pro]
+        device_name_prefix: [platform=iOS Simulator,name=iPhone 11 Pro]
         os_version: [13.7, 14.4, 14.5, 15.0]
     steps:
       - uses: actions/checkout@v2
@@ -71,7 +71,7 @@ jobs:
         scheme: [CombineCombineLatestArity]
         platform: [tvOS]
         sdk: [appletvsimulator]
-        device_name_prefix: [name=Apple TV]
+        device_name_prefix: [platform=tvOS Simulator,name=Apple TV]
         os_version: [13.4, 14.3, 14.5, 15.0]
     steps:
       - uses: actions/checkout@v2
@@ -103,7 +103,7 @@ jobs:
         scheme: [CombineCombineLatestArity]
         platform: [watchOS]
         sdk: [watchsimulator]
-        device_name_prefix: [name=Apple Watch Series 4 - 44mm]
+        device_name_prefix: [platform=watchOS Simulator,name=Apple Watch Series 4 - 44mm]
         os_version: [6.2, 7.2, 7.4, 8.0]
     steps:
       - uses: actions/checkout@v2
