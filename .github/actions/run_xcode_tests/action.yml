@@ -31,12 +31,12 @@ runs:
     - shell: bash
       id: create_variables
       run: |
-        echo "::set-output name=test_destination::\"$(echo \"${{ inputs.device_name_prefix }} os=${{ inputs.test_os_version }}\" | tr -d " os=REPLACE_ME")\""
-        echo "::set-output name=html_test_results_output_path::\"${{ inputs.test_results_output_base_path }}/${{ inputs.platform }}-$(echo ${{ inputs.test_os_version }} | tr . _).html\""
+        echo "::set-output name=test_destination::$(echo \"${{ inputs.device_name_prefix }} os=${{ inputs.test_os_version }}\" | tr -d " os=REPLACE_ME")"
+        echo "::set-output name=html_test_results_output_path::${{ inputs.test_results_output_base_path }}/${{ inputs.platform }}-$(echo ${{ inputs.test_os_version }} | tr . _).html"
     - shell: bash
       id: run_tests
       run: |
-        echo "will run: xcodebuild -scheme ${{ inputs.scheme }} -sdk ${{ inputs.sdk }} -destination ${{ steps.create_variables.outputs.test_destination }} -disableAutomaticPackageResolution -enableCodeCoverage YES test" && \
+        echo "will run: xcodebuild -scheme ${{ inputs.scheme }} -sdk ${{ inputs.sdk }} -destination "${{ steps.create_variables.outputs.test_destination }}" -disableAutomaticPackageResolution -enableCodeCoverage YES test" && \
         set -o pipefail && \
-        xcodebuild -scheme ${{ inputs.scheme }} -sdk ${{ inputs.sdk }} -destination ${{ steps.create_variables.outputs.test_destination }} -disableAutomaticPackageResolution -enableCodeCoverage YES test | \
-        xcpretty -c -r html --output ${{ steps.create_variables.outputs.html_test_results_output_path }}
+        xcodebuild -scheme ${{ inputs.scheme }} -sdk ${{ inputs.sdk }} -destination "${{ steps.create_variables.outputs.test_destination }}" -disableAutomaticPackageResolution -enableCodeCoverage YES test | \
+        xcpretty -c -r html --output "${{ steps.create_variables.outputs.html_test_results_output_path }}"

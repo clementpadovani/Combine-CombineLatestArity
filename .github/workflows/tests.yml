@@ -22,7 +22,7 @@ jobs:
           sdk: ${{ matrix.sdk }}
           platform: ${{ matrix.platform }}
           device_name_prefix: ${{ matrix.device_name_prefix }}
-          test_results_output_base_path: "./logs"
+          test_results_output_base_path: ./logs
       - uses: actions/upload-artifact@v1
         with:
           name: build-logs-${{ github.run_id }}
@@ -54,7 +54,7 @@ jobs:
           platform: ${{ matrix.platform }}
           device_name_prefix: ${{ matrix.device_name_prefix }}
           test_os_version: ${{ matrix.os_version }}
-          test_results_output_base_path: "./logs"
+          test_results_output_base_path: ./logs
       - uses: codecov/codecov-action@v1.0.13
         with:
           token: a42542a2-c356-4a7a-96cb-8d5ee53e43b7
@@ -90,7 +90,7 @@ jobs:
           platform: ${{ matrix.platform }}
           device_name_prefix: ${{ matrix.device_name_prefix }}
           test_os_version: ${{ matrix.os_version }}
-          test_results_output_base_path: "./logs"
+          test_results_output_base_path: ./logs
       - uses: actions/upload-artifact@v1
         with:
           name: build-logs-${{ github.run_id }}
@@ -122,7 +122,7 @@ jobs:
           platform: ${{ matrix.platform }}
           device_name_prefix: ${{ matrix.device_name_prefix }}
           test_os_version: ${{ matrix.os_version }}
-          test_results_output_base_path: "./logs"
+          test_results_output_base_path: ./logs
       - uses: actions/upload-artifact@v1
         with:
           name: build-logs-${{ github.run_id }}
