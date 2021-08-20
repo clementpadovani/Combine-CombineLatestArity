@@ -29,5 +29,6 @@ let package = Package(
                            .product(name: "EntwineTest",
                                     package: "Entwine"),
                            "Difference"]),
-    ]
+    ],
+    swiftLanguageVersions: [.v5]
 )
