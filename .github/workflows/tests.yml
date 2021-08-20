@@ -105,7 +105,7 @@ jobs:
         platform: [watchOS]
         sdk: [watchsimulator]
         device_name_prefix: ["platform=watchOS Simulator,name=Apple Watch Series 4 - 44mm"]
-        os_version: [6.2, 7.2, 7.4, "8.0"]
+        os_version: [7.4, "8.0"]
     steps:
       - uses: actions/checkout@v2
       - name: Select Xcode 13
