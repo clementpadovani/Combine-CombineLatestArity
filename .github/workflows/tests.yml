@@ -5,7 +5,7 @@ on: [push, pull_request]
 jobs:
   xcode-tests-macOS:
     name: "Runs macOS Tests"
-    runs-on: macOS-latest
+    runs-on: macOS-11
     strategy:
       matrix:
         scheme: [CombineCombineLatestArity]
@@ -31,7 +31,7 @@ jobs:
           path: logs
   xcode-tests-iOS:
     name: "Runs iOS Tests"
-    runs-on: macOS-latest
+    runs-on: macOS-11
     strategy:
       matrix:
         scheme: [CombineCombineLatestArity]
@@ -61,7 +61,7 @@ jobs:
           path: logs
   xcode-tests-tvOS:
     name: "Runs tvOS Tests"
-    runs-on: macOS-latest
+    runs-on: macOS-11
     strategy:
       matrix:
         scheme: [CombineCombineLatestArity]
@@ -87,7 +87,7 @@ jobs:
           path: logs
   xcode-tests-watchOS:
     name: "Runs watchOS Tests"
-    runs-on: macOS-latest
+    runs-on: macOS-11
     strategy:
       matrix:
         scheme: [CombineCombineLatestArity]
