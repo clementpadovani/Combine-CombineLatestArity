@@ -1,0 +1,113 @@
+name: Combine-CombineLatestArity
+
+on: [push, pull_request]
+
+jobs:
+  xcode-tests-macOS:
+    name: "Runs macOS Tests"
+    runs-on: macOS-latest
+    strategy:
+      matrix:
+        scheme: [CombineCombineLatestArity]
+        platform: [macOS]
+        sdk: [macosx]
+        device_name_prefix: [arch=x86_64]
+        os_version: [11.5]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Select Xcode 13
+        run: sudo xcode-select -s /Applications/Xcode_13.0.app
+      - uses: ./.github/actions/run_xcode_tests
+        with:
+          scheme: ${{ matrix.scheme }}
+          sdk: ${{ matrix.sdk }}
+          platform: ${{ matrix.platform }}
+          device_name_prefix: ${{ matrix.device_name_prefix }}
+          test_os_version: ${{ matrix.os_version }}
+          test_results_output_base_path: "./logs"
+      - uses: actions/upload-artifact@v1
+        with:
+          name: build-logs-${{ github.run_id }}
+          path: logs
+  xcode-tests-iOS:
+    name: "Runs iOS Tests"
+    runs-on: macOS-latest
+    strategy:
+      matrix:
+        scheme: [CombineCombineLatestArity]
+        platform: [iOS]
+        sdk: [iphonesimulator]
+        device_name_prefix: [name=iPhone Xs]
+        os_version: [13.7, 14.4, 14.5, 15.0]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Select Xcode 13
+        run: sudo xcode-select -s /Applications/Xcode_13.0.app
+      - uses: ./.github/actions/run_xcode_tests
+        with:
+          scheme: ${{ matrix.scheme }}
+          sdk: ${{ matrix.sdk }}
+          platform: ${{ matrix.platform }}
+          device_name_prefix: ${{ matrix.device_name_prefix }}
+          test_os_version: ${{ matrix.os_version }}
+          test_results_output_base_path: "./logs"
+      - uses: codecov/codecov-action@v1.0.13
+        with:
+          token: a42542a2-c356-4a7a-96cb-8d5ee53e43b7
+          name: Combine-CombineLatestArity
+      - uses: actions/upload-artifact@v1
+        with:
+          name: build-logs-${{ github.run_id }}
+          path: logs
+  xcode-tests-tvOS:
+    name: "Runs tvOS Tests"
+    runs-on: macOS-latest
+    strategy:
+      matrix:
+        scheme: [CombineCombineLatestArity]
+        platform: [tvOS]
+        sdk: [appletvsimulator]
+        device_name_prefix: [name=Apple TV]
+        os_version: [13.4, 14.3, 14.5, 15.0]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Select Xcode 13
+        run: sudo xcode-select -s /Applications/Xcode_13.0.app
+      - uses: ./.github/actions/run_xcode_tests
+        with:
+          scheme: ${{ matrix.scheme }}
+          sdk: ${{ matrix.sdk }}
+          platform: ${{ matrix.platform }}
+          device_name_prefix: ${{ matrix.device_name_prefix }}
+          test_os_version: ${{ matrix.os_version }}
+          test_results_output_base_path: "./logs"
+      - uses: actions/upload-artifact@v1
+        with:
+          name: build-logs-${{ github.run_id }}
+          path: logs
+  xcode-tests-watchOS:
+    name: "Runs watchOS Tests"
+    runs-on: macOS-latest
+    strategy:
+      matrix:
+        scheme: [CombineCombineLatestArity]
+        platform: [watchOS]
+        sdk: [watchsimulator]
+        device_name_prefix: [name=Apple Watch Series 4 - 44mm]
+        os_version: [6.2, 7.2, 7.4, 8.0]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Select Xcode 13
+        run: sudo xcode-select -s /Applications/Xcode_13.0.app
+      - uses: ./.github/actions/run_xcode_tests
+        with:
+          scheme: ${{ matrix.scheme }}
+          sdk: ${{ matrix.sdk }}
+          platform: ${{ matrix.platform }}
+          device_name_prefix: ${{ matrix.device_name_prefix }}
+          test_os_version: ${{ matrix.os_version }}
+          test_results_output_base_path: "./logs"
+      - uses: actions/upload-artifact@v1
+        with:
+          name: build-logs-${{ github.run_id }}
+          path: logs
