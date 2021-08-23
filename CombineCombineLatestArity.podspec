@@ -17,4 +17,6 @@ Pod::Spec.new do |s|
   s.frameworks = 'Combine'
 
   s.swift_version = '5.0'
+
+  s.static_framework = true
 end
