@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'CombineCombineLatestArity'
-  s.version = '1.0.0'
+  s.version = '1.0.1'
   s.license = 'MIT'
   s.summary = 'Combine extension allowing to use `combineLatest` with up-to 26 other publishers'
   s.homepage = 'https://github.com/clementpadovani/Combine-CombineLatestArity'
