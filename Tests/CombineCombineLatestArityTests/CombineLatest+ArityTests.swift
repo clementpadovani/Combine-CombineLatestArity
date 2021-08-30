@@ -10,32 +10,6 @@ import Entwine
 import EntwineTest
 
 internal final class CombineLatestArityTests: XCTestCase {
-    private enum DefinedTypes {
-        typealias Tuple4<T> = (T, T, T, T)
-        typealias Tuple5<T> = (T, T, T, T, T)
-        typealias Tuple6<T> = (T, T, T, T, T, T)
-        typealias Tuple7<T> = (T, T, T, T, T, T, T)
-        typealias Tuple8<T> = (T, T, T, T, T, T, T, T)
-        typealias Tuple9<T> = (T, T, T, T, T, T, T, T, T)
-        typealias Tuple10<T> = (T, T, T, T, T, T, T, T, T, T)
-        typealias Tuple11<T> = (T, T, T, T, T, T, T, T, T, T, T)
-        typealias Tuple12<T> = (T, T, T, T, T, T, T, T, T, T, T, T)
-        typealias Tuple13<T> = (T, T, T, T, T, T, T, T, T, T, T, T, T)
-        typealias Tuple14<T> = (T, T, T, T, T, T, T, T, T, T, T, T, T, T)
-        typealias Tuple15<T> = (T, T, T, T, T, T, T, T, T, T, T, T, T, T, T)
-        typealias Tuple16<T> = (T, T, T, T, T, T, T, T, T, T, T, T, T, T, T, T)
-        typealias Tuple17<T> = (T, T, T, T, T, T, T, T, T, T, T, T, T, T, T, T, T)
-        typealias Tuple18<T> = (T, T, T, T, T, T, T, T, T, T, T, T, T, T, T, T, T, T)
-        typealias Tuple19<T> = (T, T, T, T, T, T, T, T, T, T, T, T, T, T, T, T, T, T, T)
-        typealias Tuple20<T> = (T, T, T, T, T, T, T, T, T, T, T, T, T, T, T, T, T, T, T, T)
-        typealias Tuple21<T> = (T, T, T, T, T, T, T, T, T, T, T, T, T, T, T, T, T, T, T, T, T)
-        typealias Tuple22<T> = (T, T, T, T, T, T, T, T, T, T, T, T, T, T, T, T, T, T, T, T, T, T)
-        typealias Tuple23<T> = (T, T, T, T, T, T, T, T, T, T, T, T, T, T, T, T, T, T, T, T, T, T, T)
-        typealias Tuple24<T> = (T, T, T, T, T, T, T, T, T, T, T, T, T, T, T, T, T, T, T, T, T, T, T, T)
-        typealias Tuple25<T> = (T, T, T, T, T, T, T, T, T, T, T, T, T, T, T, T, T, T, T, T, T, T, T, T, T)
-        typealias Tuple26<T> = (T, T, T, T, T, T, T, T, T, T, T, T, T, T, T, T, T, T, T, T, T, T, T, T, T, T)
-    }
-
     private var scheduler: TestScheduler!
 
     override func setUp() {
